@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Invoice Generator</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+    <h1>Blockchain Invoice Generator</h1>
+    <form method="POST" action="{% url 'generate_invoice' %}">
+        {% csrf_token %}
+        <input type="text" name="tx_hash" placeholder="Enter Transaction Hash" required style="width:300px;"><br><br>
+        <button type="submit">Generate & Download Invoice</button>
+    </form>
+</body>
+</html>
